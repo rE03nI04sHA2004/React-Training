@@ -1,0 +1,46 @@
+<html>
+<body>
+<h1> LOGIN PAGE</h1><br><br><br><br><br><br>
+<input type ="string"id="ur"><br><br>
+<input type ="string"id="p"><br><br>
+<button id="v">VALIDATE</button>
+<h1> The password is</h1>
+<h1 id="yes"></h1>
+
+</body>
+<script>
+document.getElementById('v').addEventListener('click',function()
+{
+var i="Renisha";
+var j="Sanjay";
+var u=(document.getElementById('ur').value);
+var pw=(document.getElementById('p').value);
+console.log(u,pw);
+var a = "SUCCESS,BOTH ARE CORRECT";
+var b = "TRY AGAIN,BOTH ARE INCORRECT";
+var c = "USERNAME IS  CORRECT BUT PASSWORD IS INCORRECT";
+var d = "USERNAME IS  INCORRECT BUT PASSWORD IS CORRECT";
+var res;
+if (u==i & pw==j){
+  res=a;
+  console.log(res);}
+
+else if(u!=i & pw!=j){
+ res=b;
+console.log(res);}
+else if (u==i & pw!=j){
+  res=c;
+  console.log(res);}
+
+else {
+  res=d;
+  console.log(res);}
+
+document.getElementById('yes').innerText =`${res}`;
+
+});
+
+
+
+</script>
+</html>
